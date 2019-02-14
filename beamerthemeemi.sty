@@ -1,0 +1,83 @@
+\ProvidesPackage{beamerthemeemi}
+
+\mode<presentation>
+
+\newdimen\head@height
+% \head@height=42pt
+\head@height=21pt
+
+\definecolor{neicblue}{RGB}{115,115,215}
+\setbeamercolor{section in head}{fg=black,bg=white}
+\setbeamercolor{emi in head}{fg=black}
+\setbeamercolor{date in foot}{fg=gray} %% JSW
+
+\setbeamertemplate{navigation symbols}{}
+
+\newbox\logobox
+
+\defbeamertemplate*{headline}{emi theme}{\hrule height0pt depth0pt}
+
+\newdimen\headI
+\newdimen\headW
+
+\defbeamertemplate*{frametitle}{emi theme}
+{
+\nointerlineskip
+\baselineskip=0pt
+\lineskip=0pt
+\parsep=0pt
+\headI=\head@height
+\advance\headI-17pt
+\headW=\paperwidth
+\advance\headW-\wd\logobox
+}
+
+\defbeamertemplate*{footline}{emi theme}
+{
+\leavevmode
+\begin{beamercolorbox}[wd=\paperwidth,ht=3ex,dp=2.9ex]{date in foot}
+\small {} \insertauthor , \insertinstitute , \insertdate\hfill\insertframenumber\hspace{0.35in} \ 
+\end{beamercolorbox}
+}
+
+% \setbeamercolor{normal text}{fg=white} %% for new NeIC template! 
+\setbeamercolor{normal text}{fg=black} %% for old NeIC template! 
+\setbeamerfont{alerted text}{series=\bfseries}
+
+\setbeamertemplate{itemize item}{{\color{black}$\bullet$}}
+% \setbeamertemplate{itemize item}{{$\bullet$}}
+\setbeamertemplate{itemize subitem}{{\color{black}$\LargerCdot$}}
+\setbeamertemplate{itemize subsubitem}{{\color{black}$\cdot$}}
+
+%----------------------------------------
+% Title page
+%
+%
+\setbeamertemplate{title page}{
+\lineskip=0pt
+\vskip\head@height
+\leavevmode
+\hskip-\beamer@leftmargin
+\vbox to 0pt{
+\vskip 0pt minus 1fill
+}
+
+\hbox to \hsize{%
+\hfill\vbox to120pt{
+\advance\hsize-70pt
+\begin{raggedright}
+{\advance\baselineskip 7pt
+\textbf{\Huge\inserttitle} \\
+\textit{\Large\insertsubtitle}
+\bigskip
+
+}
+\end{raggedright}
+\vfill
+}\hfill}%
+
+\vfill
+
+\vskip0pt plus1filll
+}
+% end title page

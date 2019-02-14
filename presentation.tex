@@ -1,0 +1,85 @@
+\documentclass[smaller]{beamer}
+
+\usepackage{times}
+\usepackage{multicol}
+\usepackage{xspace}
+\usepackage{bm}
+
+\usetheme{emi}
+
+\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{hyperref} 
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{everypage}
+
+\usepackage{pgfgantt}
+
+\usepackage{multimedia}
+\usepackage{url}
+
+%% Need this!
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{enumerate item}{fg=lightgray}
+
+%% Check oot white text... maybe do this right before the last slide?
+
+% \setbeamercolor{normal text}{fg=white}
+% \setbeamercolor{itemize itemi}{fg=white}
+% \setbeamercolor{enumerate item}{fg=white}
+% \setbeamercolor{itemize bullet}{fg=white}
+
+\newcommand\MyHeading[1]{%
+  \begin{textblock*}{\textwidth}(0.06\textwidth,0.25cm)%
+    \bf \Large \color{black} #1 \hfill
+  \end{textblock*} % \vspace{0.125in}
+}
+
+\usebackgroundtemplate%
+{%
+   % \centering\includegraphics[width=\paperwidth,height=\paperheight]{NeIC_presentation.png}%
+   \centering\includegraphics[width=\paperwidth,height=\paperheight]{NeIC_presentation_reduced.png}%
+}
+
+\input{/home/jwhite/texfiles/abbrev}
+
+\title{\color{neicblue} The \ED project: Nordic Network Challenge}
+% \subtitle{XXX does not seem to work?}
+\author{John White}
+\institute{NeIC}
+\date{NORDUnet conference, Helsing{\o}r, Sept 18$\rm^{th}$ 2018}
+
+\begin{document}
+
+%% \include{neic-front-page} 
+
+\begin{frame}[fragile]
+\maketitle
+\end{frame}
+
+%% Now stop using the background template...
+
+{\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth,height=\paperheight]{NeIC_presentation_plain.png}}
+
+% \include{introduction}
+
+{\usebackgroundtemplate{} \setbeamercolor{normal text}{fg=black}
+
+\include{sun-earth}
+\include{eiscat_radar_all_in_one}
+\include{eiscat3d-site}
+\include{aurora_tromso}
+\include{eiscat_movie}
+\include{eiscat3d_movie}
+
+{\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth,height=\paperheight]{NeIC_presentation_plain.png}}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{itemize item}{fg=white}
+\setbeamercolor{enumerate item}{fg=white}
+
+{\usebackgroundtemplate{\centering\includegraphics[width=\paperwidth,height=\paperheight]{NeIC_background_logo.png}}
+
+\end{document}
