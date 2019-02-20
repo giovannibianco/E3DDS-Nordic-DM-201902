@@ -21,22 +21,25 @@
 \usepackage{url}
 
 %% Need this!
-\setbeamercolor{normal text}{fg=black}
-\setbeamercolor{itemize item}{fg=black}
-\setbeamercolor{enumerate item}{fg=lightgray}
+% \setbeamercolor{normal text}{fg=black}
+% \setbeamercolor{itemize item}{fg=black}
+% \setbeamercolor{enumerate item}{fg=lightgray}
 
 %% Check oot white text... maybe do this right before the last slide?
 
-% \setbeamercolor{normal text}{fg=white}
-% \setbeamercolor{itemize itemi}{fg=white}
-% \setbeamercolor{enumerate item}{fg=white}
-% \setbeamercolor{itemize bullet}{fg=white}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{itemize itemi}{fg=white}
+\setbeamercolor{enumerate item}{fg=white}
+\setbeamercolor{itemize bullet}{fg=white}
 
 \newcommand\MyHeading[1]{%
   \begin{textblock*}{\textwidth}(0.06\textwidth,0.25cm)%
     \bf \Large \color{black} #1 \hfill
   \end{textblock*} % \vspace{0.125in}
 }
+
+% \addtobeamertemplate{footnote}{\vspace{2ex}}{}
+% \usepackage[bottom]{footmisc}
 
 \usebackgroundtemplate%
 {%
@@ -79,6 +82,14 @@
 \setbeamercolor{normal text}{fg=white}
 \setbeamercolor{itemize item}{fg=white}
 \setbeamercolor{enumerate item}{fg=white}
+
+\include{eiscat-data}
+% \include{eiscat_3d_data_levels-1}
+\include{eiscat_3d_data_levels-2}
+
+\include{fair-data}
+
+
 
 \usebackgroundtemplate{\centering\includegraphics[width=\paperwidth,height=\paperheight]{NeIC_background_logo.png}}
 
