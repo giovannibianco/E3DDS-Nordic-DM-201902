@@ -10,14 +10,14 @@
 {Level} & {Type}        & {Produced by} &  {Storage } & {Format} & {Rate}\\ \hline
 % \bf 0  & Sampled antenna        & Antenna & None & Binary \\
 %        & voltages               & sub-arrays & & \\
-\bf 1a & Ring buffer data                & $1^{\rm st}$ stage beam & 4 months$^*$ & UDP stream/ & $\leq 0.8$~Tb/s \\
+\bf 1a & Ring buffer data                & $1^{\rm st}$ stage beam & 4 months$^*$ & UDP stream/ & {\colblue \bf $\leq 0.8$~Tb/s} \\
        &                                 & former &  & HDF5  \\
-\bf 1b & Beam-formed data                & $2^{\rm nd}$ stage beam & 4 months$^*$ & HDF5 & 64~Gb/s \\
+\bf 1b & Beam-formed data                & $2^{\rm nd}$ stage beam & 4 months$^*$ & HDF5 & {\colblue \bf 64~Gb/s} \\
        &                                 & former & &  \\
 \bf 2  & Time integrated                 & All sites & Archived & \HDF \\
        & correlated data & & & \\
 \bf 3a & Physical parameters             & All sites & Archived & \HDF &  \\
-\bf 3b & 3D-voxel parameters             & Operations centre & Archived & \HDF & $\approx 1$~Gb/s \\
+\bf 3b & 3D-voxel parameters             & Operations centre & Archived & \HDF & {\colblue \bf $\approx 1$~Gb/s} \\
 \bf 4  & Derived geophysical & Users & Users & Publications etc \\
        & parameters & & & 
 \end{tabular}
